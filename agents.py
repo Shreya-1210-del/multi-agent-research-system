@@ -8,7 +8,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 #model setup 
-llm = ChatOpenAI(model = "gpt-4o-mini",temperature=0)
+llm = ChatGoogleGenerativeAI(
+    model="gemini-2.5-flash",
+    temperature=0,
+    max_retries=2
+)
 
 
 #1st agent 
